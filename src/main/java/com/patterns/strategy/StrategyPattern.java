@@ -177,13 +177,21 @@ class SortingFrame extends JFrame {
         return null;
     }
 
+    /**
+     * Generates a list of random integers.
+     *
+     * @return a list of random integers.
+     */
     private List<Integer> generateRandomList() {
-        List<Integer> resultList = new ArrayList<>();
         Random random = new Random();
 
-        int listSize = random.nextInt(0, 9999);
+        int maxListSize = 10000;
+        int listSize = random.nextInt(maxListSize);
+
+        List<Integer> resultList = new ArrayList<>(listSize);
+
         for (int i = 0; i < listSize; i++) {
-            resultList.add(random.nextInt());
+            resultList.add(random.nextInt(10000));
         }
 
         return resultList;
