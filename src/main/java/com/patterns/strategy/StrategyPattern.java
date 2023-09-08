@@ -24,12 +24,18 @@ import com.patterns.strategy.strategies.InsertionSort;
 import com.patterns.strategy.strategies.SortStrategy;
 
 /**
+ * The <code>StrategyPattern</code> class is the main entry point to demonstrate
+ * the strategy design pattern with sorting algorithms through a Swing GUI.
  *
  * @author Luan Nadaletti
- *
  */
 public class StrategyPattern {
 
+    /**
+     * The main entry point of the application.
+     *
+     * @param args Command line arguments. Not used in this application.
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new SortingFrame();
@@ -40,6 +46,10 @@ public class StrategyPattern {
 
 }
 
+/**
+ * The <code>SortingFrame</code> class provides a Swing interface to select,
+ * input and execute different sorting strategies.
+ */
 class SortingFrame extends JFrame {
 
     private static final long serialVersionUID = 1L;
@@ -47,6 +57,9 @@ class SortingFrame extends JFrame {
     private final JTextArea inputTextArea;
     private final JTextArea outputTextArea;
 
+    /**
+     * Constructs a new SortingFrame with all the necessary GUI components.
+     */
     public SortingFrame() {
         setTitle("Sorting App");
         setSize(600, 400);
@@ -115,6 +128,14 @@ class SortingFrame extends JFrame {
         add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    /**
+     * Captures the input numbers from the text area, and converts them into an
+     * int array. Displays a dialog if the input contains non-numeric
+     * characters.
+     *
+     * @return an array of integers representing the user input or null if input
+     *         is empty or invalid.
+     */
     private int[] inputArrayUsingDialog() {
         String inputText = inputTextArea.getText().trim();
 
@@ -138,6 +159,13 @@ class SortingFrame extends JFrame {
         return null;
     }
 
+    /**
+     * Returns the sort strategy based on the label provided.
+     *
+     * @param label the name/label of the sorting algorithm.
+     * @return a {@link SortStrategy} instance based on the given label, or null
+     *         if not matched.
+     */
     private SortStrategy getSortStrategyByLabel(String label) {
         if (label.equalsIgnoreCase("bubble sort")) {
             return new BubbleSort();
