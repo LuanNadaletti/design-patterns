@@ -10,33 +10,33 @@ import org.junit.jupiter.api.Test;
  * @author Luan Nadaletti
  *
  */
-public class BubbleSortTest {
+public class InsertionSortTest {
 
-    private BubbleSort bubbleSort;
+    private InsertionSort insertionSort;
 
     @BeforeEach
-    void setUp() {
-        bubbleSort = new BubbleSort();
+    void setup() {
+        insertionSort = new InsertionSort();
     }
 
     @Test
     void testSort() {
         int[] unsortedArray = {
-                5, 2, 9, 1, 5, 6 };
-        int[] expectedSortedArray = {
-                1, 2, 5, 5, 6, 9 };
+                9, 3, 4, 6, 1, 2, 5, 8, 7 };
+        int[] expectedArray = {
+                1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-        bubbleSort.sort(unsortedArray);
-        assertArrayEquals(expectedSortedArray, unsortedArray);
+        insertionSort.sort(unsortedArray);
+        assertArrayEquals(unsortedArray, expectedArray);
     }
 
     @Test
     void testSortEmptyArray() {
         int[] emptyArray = {};
-        int[] expectedSortedArray = {};
+        int[] expectedArray = {};
 
-        bubbleSort.sort(emptyArray);
-        assertArrayEquals(expectedSortedArray, emptyArray);
+        insertionSort.sort(emptyArray);
+        assertArrayEquals(emptyArray, expectedArray);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class BubbleSortTest {
         int[] expectedSortedArray = {
                 42 };
 
-        bubbleSort.sort(singleElementArray);
+        insertionSort.sort(singleElementArray);
         assertArrayEquals(expectedSortedArray, singleElementArray);
     }
 
