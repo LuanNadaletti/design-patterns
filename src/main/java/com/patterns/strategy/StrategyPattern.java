@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -75,6 +78,15 @@ class SortingFrame extends JFrame {
             }
         });
 
+        JButton randomListButton = new JButton("Random Numbers");
+        randomListButton.addActionListener(e -> {
+            StringBuilder randomNumbersListToString = new StringBuilder();
+            for (Integer number : generateRandomList()) {
+                randomNumbersListToString.append(number + " ");
+            }
+            inputTextArea.setText(randomNumbersListToString.toString());
+        });
+
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.Y_AXIS));
         inputPanel.add(new JLabel("Enter numbers separated by spaces:"));
@@ -91,6 +103,7 @@ class SortingFrame extends JFrame {
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(sortButton);
+        buttonPanel.add(randomListButton);
 
         JPanel inputOutputPanel = new JPanel(new GridLayout(1, 2, 10, 0));
         inputOutputPanel.add(inputPanel);
@@ -134,6 +147,18 @@ class SortingFrame extends JFrame {
         }
 
         return null;
+    }
+
+    private List<Integer> generateRandomList() {
+        List<Integer> resultList = new ArrayList<>();
+        Random random = new Random();
+
+        int listSize = random.nextInt(0, 9999);
+        for (int i = 0; i < listSize; i++) {
+            resultList.add(random.nextInt());
+        }
+
+        return resultList;
     }
 
 }
