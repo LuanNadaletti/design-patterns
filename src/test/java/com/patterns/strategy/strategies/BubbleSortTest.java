@@ -6,9 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
+ * The <code>BubbleSortTest</code> class is a JUnit test class for testing the
+ * {@link BubbleSort} implementation of the {@link SortStrategy} interface.
  *
  * @author Luan Nadaletti
- *
  */
 public class BubbleSortTest {
 

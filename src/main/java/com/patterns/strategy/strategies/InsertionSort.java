@@ -3,9 +3,11 @@ package com.patterns.strategy.strategies;
 import java.util.Arrays;
 
 /**
+ * The <code>InsertionSort</code> class implements the {@link SortStrategy}
+ * interface to provide an insertion sort algorithm for sorting integer arrays.
+ * It also collects information about the sorting process.
  *
  * @author Luan Nadaletti
- *
  */
 public class InsertionSort implements SortStrategy {
 
@@ -13,6 +15,11 @@ public class InsertionSort implements SortStrategy {
     private int numberOfRepetitions;
     private long elapsedTime;
 
+    /**
+     * Sorts the given integer array using the insertion sort algorithm.
+     *
+     * @param array the integer array to be sorted.
+     */
     @Override
     public void sort(int[] array) {
         long currentNanoTime = System.nanoTime();
@@ -36,6 +43,12 @@ public class InsertionSort implements SortStrategy {
         sortedArray = array.clone();
     }
 
+    /**
+     * Gets information about the insertion sort process, including the sorted
+     * array, the number of repetitions, and the elapsed time.
+     *
+     * @return a string containing information about the insertion sort process.
+     */
     @Override
     public String getSortInfo() {
         return "Insertion Sort Info: \n" + "Sorted array: "
