@@ -1,4 +1,4 @@
-package com.patterns.strategy;
+package com.patterns.strategy.gui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -17,39 +17,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.SwingUtilities;
 
 import com.patterns.strategy.contexts.SortContext;
 import com.patterns.strategy.strategies.BubbleSort;
 
 /**
- * The <code>StrategyPattern</code> class is the main entry point to demonstrate
- * the strategy design pattern with sorting algorithms through a Swing GUI.
+ * The <code>SortingFrame</code> class provides a Swing interface to select,
+ * input and execute different sorting strategies.
  *
  * @author Luan Nadaletti
  */
-public class StrategyPattern {
-
-    /**
-     * The main entry point of the application.
-     *
-     * @param args Command line arguments. Not used in this application.
-     */
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new SortingFrame();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
-        });
-    }
-
-}
-
-/**
- * The <code>SortingFrame</code> class provides a Swing interface to select,
- * input and execute different sorting strategies.
- */
-class SortingFrame extends JFrame {
+public class SortingFrame extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private final JComboBox<String> algorithmComboBox;
