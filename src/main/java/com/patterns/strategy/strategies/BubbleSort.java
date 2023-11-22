@@ -41,17 +41,15 @@ public class BubbleSort implements SortStrategy {
     }
 
     /**
-     * Gets information about the bubble sort process, including the sorted
-     * array, the number of repetitions, and the elapsed time.
+     * Gets information about the bubble sort process, including the sorted array,
+     * the number of repetitions, and the elapsed time.
      *
      * @return a string containing information about the bubble sort process.
      */
     @Override
     public String getSortInfo() {
-        return "Bubble Sort Info: \n" + "Sorted array: "
-                + Arrays.toString(sortedArray) + "\n"
-                + "Number of repetitions: " + numberOfRepetitions + "\n"
-                + "Elapsed time: " + elapsedTime + " nanoseconds";
+        return "Bubble Sort Info: \n" + "Sorted array: " + Arrays.toString(sortedArray) + "\n"
+                + "Number of repetitions: " + numberOfRepetitions + "\n" + "Elapsed time: " + elapsedTime
+                + " nanoseconds";
     }
-
 }

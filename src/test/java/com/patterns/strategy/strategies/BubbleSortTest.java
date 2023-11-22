@@ -22,10 +22,8 @@ public class BubbleSortTest {
 
     @Test
     void testSort() {
-        int[] unsortedArray = {
-                5, 2, 9, 1, 5, 6 };
-        int[] expectedSortedArray = {
-                1, 2, 5, 5, 6, 9 };
+        int[] unsortedArray = { 5, 2, 9, 1, 5, 6 };
+        int[] expectedSortedArray = { 1, 2, 5, 5, 6, 9 };
 
         bubbleSort.sort(unsortedArray);
         assertArrayEquals(expectedSortedArray, unsortedArray);
@@ -42,10 +40,8 @@ public class BubbleSortTest {
 
     @Test
     void testSortSingleElementArray() {
-        int[] singleElementArray = {
-                42 };
-        int[] expectedSortedArray = {
-                42 };
+        int[] singleElementArray = { 42 };
+        int[] expectedSortedArray = { 42 };
 
         bubbleSort.sort(singleElementArray);
         assertArrayEquals(expectedSortedArray, singleElementArray);
@@ -53,10 +49,8 @@ public class BubbleSortTest {
 
     @Test
     void testSortDescendingOrder() {
-        int[] descendingArray = {
-                9, 7, 5, 3, 1 };
-        int[] expectedSortedArray = {
-                1, 3, 5, 7, 9 };
+        int[] descendingArray = { 9, 7, 5, 3, 1 };
+        int[] expectedSortedArray = { 1, 3, 5, 7, 9 };
 
         bubbleSort.sort(descendingArray);
         assertArrayEquals(expectedSortedArray, descendingArray);
@@ -64,10 +58,8 @@ public class BubbleSortTest {
 
     @Test
     void testSortAlreadySorted() {
-        int[] sortedArray = {
-                1, 2, 3, 4, 5 };
-        int[] expectedSortedArray = {
-                1, 2, 3, 4, 5 };
+        int[] sortedArray = { 1, 2, 3, 4, 5 };
+        int[] expectedSortedArray = { 1, 2, 3, 4, 5 };
 
         bubbleSort.sort(sortedArray);
         assertArrayEquals(expectedSortedArray, sortedArray);
@@ -75,13 +67,10 @@ public class BubbleSortTest {
 
     @Test
     void testSortDuplicateValues() {
-        int[] duplicateArray = {
-                3, 2, 3, 1, 2, 1 };
-        int[] expectedSortedArray = {
-                1, 1, 2, 2, 3, 3 };
+        int[] duplicateArray = { 3, 2, 3, 1, 2, 1 };
+        int[] expectedSortedArray = { 1, 1, 2, 2, 3, 3 };
 
         bubbleSort.sort(duplicateArray);
         assertArrayEquals(expectedSortedArray, duplicateArray);
     }
-
 }

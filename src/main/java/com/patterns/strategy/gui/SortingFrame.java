@@ -65,12 +65,11 @@ public class SortingFrame extends JFrame {
     }
 
     /**
-     * Captures the input numbers from the text area, and converts them into an
-     * int array. Displays a dialog if the input contains non-numeric
-     * characters.
+     * Captures the input numbers from the text area, and converts them into an int
+     * array. Displays a dialog if the input contains non-numeric characters.
      *
-     * @return an array of integers representing the user input or null if input
-     *         is empty or invalid.
+     * @return an array of integers representing the user input or null if input is
+     *         empty or invalid.
      */
     private int[] inputArrayUsingDialog() {
         String inputText = inputTextArea.getText().trim();
@@ -83,8 +82,7 @@ public class SortingFrame extends JFrame {
                 try {
                     array[i] = Integer.parseInt(inputArray[i]);
                 } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(this,
-                            "Invalid input. Please enter valid numbers.");
+                    JOptionPane.showMessageDialog(this, "Invalid input. Please enter valid numbers.");
                     return null;
                 }
             }
@@ -107,8 +105,8 @@ public class SortingFrame extends JFrame {
     }
 
     /**
-     * Creates and configures a JTextArea for user input with the specified
-     * number of rows and columns.
+     * Creates and configures a JTextArea for user input with the specified number
+     * of rows and columns.
      *
      * @param rows    The number of rows in the text area.
      * @param columns The number of columns in the text area.
@@ -121,8 +119,8 @@ public class SortingFrame extends JFrame {
     }
 
     /**
-     * Creates and configures a JTextArea for displaying output with a fixed
-     * font and size.
+     * Creates and configures a JTextArea for displaying output with a fixed font
+     * and size.
      *
      * @return The configured JTextArea for displaying output.
      */
@@ -148,16 +146,15 @@ public class SortingFrame extends JFrame {
             if (array != null) {
                 sortContext.setSortStrategy(selectedSort);
                 sortContext.sort(array);
-                outputTextArea
-                        .setText(sortContext.getSortStrategy().getSortInfo());
+                outputTextArea.setText(sortContext.getSortStrategy().getSortInfo());
             }
         });
         return sortButton;
     }
 
     /**
-     * Creates a JButton for generating random numbers and adds an
-     * ActionListener to it.
+     * Creates a JButton for generating random numbers and adds an ActionListener to
+     * it.
      *
      * @return The configured JButton for generating random numbers.
      */
@@ -257,5 +254,4 @@ public class SortingFrame extends JFrame {
 
         return resultList;
     }
-
 }

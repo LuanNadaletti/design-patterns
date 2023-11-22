@@ -21,10 +21,8 @@ public class InsertionSortTest {
 
     @Test
     void testSort() {
-        int[] unsortedArray = {
-                9, 3, 4, 6, 1, 2, 5, 8, 7 };
-        int[] expectedArray = {
-                1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] unsortedArray = { 9, 3, 4, 6, 1, 2, 5, 8, 7 };
+        int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
         insertionSort.sort(unsortedArray);
         assertArrayEquals(unsortedArray, expectedArray);
@@ -41,10 +39,8 @@ public class InsertionSortTest {
 
     @Test
     void testSortSingleElementArray() {
-        int[] singleElementArray = {
-                42 };
-        int[] expectedSortedArray = {
-                42 };
+        int[] singleElementArray = { 42 };
+        int[] expectedSortedArray = { 42 };
 
         insertionSort.sort(singleElementArray);
         assertArrayEquals(expectedSortedArray, singleElementArray);
@@ -52,10 +48,8 @@ public class InsertionSortTest {
 
     @Test
     void testSortDescendingOrder() {
-        int[] descendingArray = {
-                9, 7, 5, 3, 1 };
-        int[] expectedSortedArray = {
-                1, 3, 5, 7, 9 };
+        int[] descendingArray = { 9, 7, 5, 3, 1 };
+        int[] expectedSortedArray = { 1, 3, 5, 7, 9 };
 
         insertionSort.sort(descendingArray);
         assertArrayEquals(expectedSortedArray, descendingArray);
@@ -63,10 +57,8 @@ public class InsertionSortTest {
 
     @Test
     void testSortAlreadySorted() {
-        int[] sortedArray = {
-                1, 2, 3, 4, 5 };
-        int[] expectedSortedArray = {
-                1, 2, 3, 4, 5 };
+        int[] sortedArray = { 1, 2, 3, 4, 5 };
+        int[] expectedSortedArray = { 1, 2, 3, 4, 5 };
 
         insertionSort.sort(sortedArray);
         assertArrayEquals(expectedSortedArray, sortedArray);
@@ -74,13 +66,10 @@ public class InsertionSortTest {
 
     @Test
     void testSortDuplicateValues() {
-        int[] duplicateArray = {
-                3, 2, 3, 1, 2, 1 };
-        int[] expectedSortedArray = {
-                1, 1, 2, 2, 3, 3 };
+        int[] duplicateArray = { 3, 2, 3, 1, 2, 1 };
+        int[] expectedSortedArray = { 1, 1, 2, 2, 3, 3 };
 
         insertionSort.sort(duplicateArray);
         assertArrayEquals(expectedSortedArray, duplicateArray);
     }
-
 }

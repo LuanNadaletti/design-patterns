@@ -51,10 +51,8 @@ public class InsertionSort implements SortStrategy {
      */
     @Override
     public String getSortInfo() {
-        return "Insertion Sort Info: \n" + "Sorted array: "
-                + Arrays.toString(sortedArray) + "\n"
-                + "Number of repetitions: " + numberOfRepetitions + "\n"
-                + "Elapsed time: " + elapsedTime + " nanoseconds";
+        return "Insertion Sort Info: \n" + "Sorted array: " + Arrays.toString(sortedArray) + "\n"
+                + "Number of repetitions: " + numberOfRepetitions + "\n" + "Elapsed time: " + elapsedTime
+                + " nanoseconds";
     }
-
 }

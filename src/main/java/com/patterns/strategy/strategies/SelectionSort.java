@@ -53,10 +53,8 @@ public class SelectionSort implements SortStrategy {
      */
     @Override
     public String getSortInfo() {
-        return "Selection Sort Info: \n" + "Sorted array: "
-                + Arrays.toString(sortedArray) + "\n"
-                + "Number of repetitions: " + numberOfRepetitions + "\n"
-                + "Elapsed time: " + elapsedTime + " nanoseconds";
+        return "Selection Sort Info: \n" + "Sorted array: " + Arrays.toString(sortedArray) + "\n"
+                + "Number of repetitions: " + numberOfRepetitions + "\n" + "Elapsed time: " + elapsedTime
+                + " nanoseconds";
     }
-
 }

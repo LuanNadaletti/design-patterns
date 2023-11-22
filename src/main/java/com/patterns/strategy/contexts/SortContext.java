@@ -23,8 +23,7 @@ public class SortContext {
      */
     public void sort(int[] array) {
         if (sortStrategy == null) {
-            throw new IllegalStateException(
-                    "Nenhuma estratégia de ordenação definida.");
+            throw new IllegalStateException("Nenhuma estratégia de ordenação definida.");
         }
 
         sortStrategy.sort(array);
@@ -44,13 +43,11 @@ public class SortContext {
         } else if (strategyName.equalsIgnoreCase("selection sort")) {
             sortStrategy = new SelectionSort();
         } else {
-            throw new IllegalArgumentException(
-                    "Estratégia de ordenação desconhecida: " + strategyName);
+            throw new IllegalArgumentException("Estratégia de ordenação desconhecida: " + strategyName);
         }
     }
 
     public SortStrategy getSortStrategy() {
         return sortStrategy;
     }
-
 }

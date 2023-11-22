@@ -19,11 +19,10 @@ public interface SortStrategy {
     void sort(int[] array);
 
     /**
-     * Gets information about the sorting process, such as the name of the
-     * sorting algorithm and any additional details.
+     * Gets information about the sorting process, such as the name of the sorting
+     * algorithm and any additional details.
      *
      * @return a string containing information about the sorting process.
      */
     String getSortInfo();
-
 }
