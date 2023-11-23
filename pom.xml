@@ -3,7 +3,7 @@
 	<groupId>luan</groupId>
 	<artifactId>patterns</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DesignPatterns</name>
+	<name>design-patterns</name>
 
 	<properties>
 		<maven.compiler.target>17</maven.compiler.target>
